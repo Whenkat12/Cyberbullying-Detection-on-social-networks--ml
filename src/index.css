@@ -1,0 +1,119 @@
+/* System fonts - no external dependencies */
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 25% 7%;
+    --foreground: 210 20% 92%;
+
+    --card: 220 22% 12%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 220 22% 12%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 174 72% 50%;
+    --primary-foreground: 220 25% 7%;
+
+    --secondary: 220 22% 12%;
+    --secondary-foreground: 210 20% 92%;
+
+    --muted: 220 22% 12%;
+    --muted-foreground: 215 25% 70%;
+
+    --accent: 220 22% 12%;
+    --accent-foreground: 210 20% 92%;
+
+    --destructive: 0 63% 50%;
+    --destructive-foreground: 210 20% 92%;
+
+    --border: 220 13% 25%;
+    --input: 220 13% 25%;
+    --ring: 174 72% 50%;
+
+    --success: 152 60% 45%;
+    --success-foreground: 210 20% 92%;
+
+    --warning: 38 90% 55%;
+    --warning-foreground: 220 25% 7%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 220 25% 7%;
+    --foreground: 210 20% 92%;
+
+    --card: 220 22% 12%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 220 22% 12%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 174 72% 50%;
+    --primary-foreground: 220 25% 7%;
+
+    --secondary: 220 22% 12%;
+    --secondary-foreground: 210 20% 92%;
+
+    --muted: 220 22% 12%;
+    --muted-foreground: 215 25% 70%;
+
+    --accent: 220 22% 12%;
+    --accent-foreground: 210 20% 92%;
+
+    --destructive: 0 63% 50%;
+    --destructive-foreground: 210 20% 92%;
+
+    --border: 220 13% 25%;
+    --input: 220 13% 25%;
+    --ring: 174 72% 50%;
+
+    --success: 152 60% 45%;
+    --success-foreground: 210 20% 92%;
+
+    --warning: 38 90% 55%;
+    --warning-foreground: 220 25% 7%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ── Custom utility classes ──────────────────────────────────────── */
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(174 72% 50%), hsl(174 72% 38%));
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(174 72% 55%), hsl(174 72% 40%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 20px hsl(174 72% 50% / 0.3), 0 0 40px hsl(174 72% 50% / 0.1);
+  }
+
+  .gradient-card {
+    background: linear-gradient(145deg, hsl(220 22% 14%), hsl(220 22% 11%));
+  }
+
+  .shadow-card {
+    box-shadow: 0 2px 10px hsl(0 0% 0% / 0.2);
+  }
+}
